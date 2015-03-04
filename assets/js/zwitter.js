@@ -15,6 +15,9 @@
     }
   }, false);
 
+  // elem.innerHTML = ['@', '&#8203', name.value].join('');
+  // window.prompt('Press Ctrl + C and Enter', elem.textContent);
+
 })();
 
 
