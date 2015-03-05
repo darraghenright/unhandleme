@@ -3,31 +3,31 @@
     <head>
         <meta charset=utf-8>
         <title>!!!</title>
-        <link href=//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css rel=stylesheet>
         <link href=assets/css/zwitter.css rel=stylesheet>
     </head>
     <body>
-        <div class="container">
-            <h1>Zwitter</h1>
-            <p>Inspired by <a href=http://csswizardry.com/2014/01/use-zero-width-spaces-to-stop-annoying-twitter-users/>Use zero-width spaces to stop annoying Twitter users</a> by <a href=https://twitter.com/csswizardry>@csswizardry</a></p>
-            <form class="form">
-                <h2>Enter a Twitter username</h2>
-                <p>Don't include the <code>@</code> symbol</p>
-                <div id="group" class="form-group">
-                    <label class="sr-only" for="name">Enter Twitter username</label>
-                    <div class="input-group input-group-lg">
-                        <div class="input-group-addon">@</div>
-                        <input type="text" class="form-control" id="name" placeholder="twitter_username" autofocus autocomplete="off">
-                    </div>
-                    <div class="alert alert-danger" role="alert">Oops. <code>@foo</code> doesn't look like a valid username.</div>
-                    <div class="done">
-                        <h2>Done?</h2>
-                        <button class="btn btn-lg btn-success">Click here</button>
-                        <p>(Or press enter)</p>
-                    </div>
-                </div>
-            </form>
-        </div>
+        <!-- preamble -->
+        <h1>@nohandle</h1>
+        <p>Or how to <a href=http://csswizardry.com/2014/01/use-zero-width-spaces-to-stop-annoying-twitter-users/>use zero-width spaces to stop annoying Twitter users</a>. Inspired by <a href=https://twitter.com/csswizardry>@csswizardry</a></p>
+        <h2>How?</h2>
+
+        why... ever wanted to Tweet about a Java annotation like @Override etc.
+        <p>Insert a <a href="http://en.wikipedia.org/wiki/Zero-width_space">Zero-width space</a> (<code>&amp;#8203</code>) before the <code>@</code> character and a handle and Twitter won't call out to that user.</p>
+
+        <!-- form -->
+        <form name="twitter" class="form form-init">
+            <div>
+                <h2>Enter a Twitter handle</h2>
+                <p>Excluding the <code>@</code> character. We'll add that.</p>
+                @ <input type="text" name="username" autofocus autocomplete="off" placeholder="Override">
+                <div class="error">Oops! Are you sure that's a valid username?</div>
+            </div>
+            <div class="done">
+            <h2>Done?</h2>
+                <input type="submit" value="click here">
+                <p>Or just press <span class="key">Enter</span></p>
+            </div>
+        </form>
         <!-- libs -->
         <script src=assets/js/zwitter.js></script>
     </body>
