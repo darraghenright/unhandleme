@@ -7,27 +7,47 @@
     </head>
     <body>
         <!-- preamble -->
-        <h1>@nohandle</h1>
-        <p>Or how to <a href=http://csswizardry.com/2014/01/use-zero-width-spaces-to-stop-annoying-twitter-users/>use zero-width spaces to stop annoying Twitter users</a>. Inspired by <a href=https://twitter.com/csswizardry>@csswizardry</a></p>
-        <h2>How?</h2>
-
-        why... ever wanted to Tweet about a Java annotation like @Override etc.
-        <p>Insert a <a href="http://en.wikipedia.org/wiki/Zero-width_space">Zero-width space</a> (<code>&amp;#8203</code>) before the <code>@</code> character and a handle and Twitter won't call out to that user.</p>
-
+        <h1>@unhandleme</h1>
+        <p>Or <a href=http://csswizardry.com/2014/01/use-zero-width-spaces-to-stop-annoying-twitter-users/>use zero-width spaces to stop annoying Twitter users</a>. Inspired by <a href=https://twitter.com/csswizardry>@csswizardry</a></p>
         <!-- form -->
         <form name="twitter" class="form form-init">
             <div>
-                <h2>Enter a Twitter handle</h2>
-                <p>Excluding the <code>@</code> character. We'll add that.</p>
-                @ <input type="text" name="username" autofocus autocomplete="off" placeholder="Override">
-                <div class="error">Oops! Are you sure that's a valid username?</div>
+                <h2>Enter a word</h2>
+                <p>Any word that might qualify as a Twitter handle (<code>/\w{1,15}/</code>.
+                <br>Excluding the <code>@</code> character. We'll add that.</p>
+                @ <input type="text" name="handle" autofocus autocomplete="off" placeholder="mixin">
+                <div class="error">Oops! Are you sure that's valid?</div>
             </div>
             <div class="done">
             <h2>Done?</h2>
                 <input type="submit" value="click here">
-                <p>Or just press <span class="key">Enter</span></p>
+                <p>Or just press <span class="keychar">Enter &darr;</span></p>
             </div>
         </form>
+        <h2>What is this?</h2>
+
+<p>It inserts a <a href="http://en.wikipedia.org/wiki/Zero-width_space">Zero-width space</a> (<code>&amp;#8203</code>) before the <code>@</code> character and a word, so you can use it in a Tweet without accidentally mentioning some complete stranger.</p>
+
+maybe you want to talk about @Override or...
+
+@-prefixed words are not just for Twitter. They're everywhere, especially in software. including:
+
+Have you ever wanted to use @Override, @mixin, @media, @Route in a Tweet but didn't want to annoy some total stranger
+
+css media queries - https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries
+templating
+razor statements and blocks - http://www.asp.net/web-pages/overview/getting-started/introducing-razor-syntax-%28c%29
+Laravel Blade Templates - http://laravel.com/docs/5.0/templates
+
+sf - http://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/index.html#annotations-for-controllers
+
+Have you ever wanted to write a <a href="http://en.wikipedia.org/wiki/Java_annotation">Java annotation</a>,
+
+
+sass http://sass-lang.com/guide
+@import @extend @mixin
+        why... ever wanted to Tweet about a Java annotation like @Override etc.
+
         <!-- libs -->
         <script src=assets/js/zwitter.js></script>
     </body>
