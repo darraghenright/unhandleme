@@ -22,13 +22,40 @@ h2
     font-size: 2em;
 }
 
-.form-error .done,
-.form-init  .done
+code
+{
+    background: #eee;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    /*font-family: 'Monaco';*/
+    color: #c00;
+    padding: 2px 4px;
+}
+
+.form .error
 {
     display: none;
 }
 
-.error
+.form input
+{
+    border: 1px solid #ccc;
+    outline: 0;
+}
+
+.form input:focus
+{
+    border: 1px solid #999;
+}
+
+.form-error input:focus
+{
+    background: #fcc;
+    border: 1px solid #f00;
+}
+
+.form-error .done,
+.form-init  .done
 {
     display: none;
 }
